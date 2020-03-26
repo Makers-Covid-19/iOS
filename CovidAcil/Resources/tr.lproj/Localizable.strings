@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  CovidAcil
+
+  Created by Serhan CANOVA on 26/03/2020.
+  Copyright © 2020 mobilegion. All rights reserved.
+*/
+
+/* Generic */
+"done" = "Tamam";
+"all" = "Tümü";
+"save" = "Kaydet";
+"cancel" = "İptal";
+"edit" = "Düzenle";
+"add" = "Ekle";
+"delete" = "Sil";
+"loading" = "Yükleniyor...";
+"search" = "Ara";
+
+/* Main */
+"calls" = "Aramalar";
+"my_contacts" = "Rehberim";
+"settings" = "Ayarlar";
+
+/* Call */
+"select_city" = "Şehir Seçin";
+"select_district" = "İlçe Seçin";
