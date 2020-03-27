@@ -30,6 +30,12 @@
 		52DBC624242E005000C9CFDB /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC622242DFD2500C9CFDB /* OpenSans-Bold.ttf */; };
 		52DBC625242E005300C9CFDB /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC623242DFD2500C9CFDB /* OpenSans-Regular.ttf */; };
 		52DBC626242E005500C9CFDB /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC621242DFD2500C9CFDB /* OpenSans-SemiBold.ttf */; };
+		52DBC629242E75F800C9CFDB /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC628242E75F800C9CFDB /* CollectionViewTableViewCell.swift */; };
+		52DBC62B242E76B300C9CFDB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC62A242E76B300C9CFDB /* CollectionViewCell.swift */; };
+		52DBC62D242E771F00C9CFDB /* CollectionViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC62C242E771F00C9CFDB /* CollectionViewTableViewCell.xib */; };
+		52DBC62F242E793B00C9CFDB /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC62E242E793A00C9CFDB /* CollectionViewCell.xib */; };
+		52DBC631242E7DEE00C9CFDB /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC630242E7DED00C9CFDB /* NumberCell.swift */; };
+		52DBC633242E7E1200C9CFDB /* NumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC632242E7E1200C9CFDB /* NumberCell.xib */; };
 		8FA31727844052444E53CA62 /* Pods_CovidAcil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D8465A70982DFF06F4DA54 /* Pods_CovidAcil.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +67,12 @@
 		52DBC621242DFD2500C9CFDB /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		52DBC622242DFD2500C9CFDB /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		52DBC623242DFD2500C9CFDB /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		52DBC628242E75F800C9CFDB /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		52DBC62A242E76B300C9CFDB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		52DBC62C242E771F00C9CFDB /* CollectionViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewTableViewCell.xib; sourceTree = "<group>"; };
+		52DBC62E242E793A00C9CFDB /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		52DBC630242E7DED00C9CFDB /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		52DBC632242E7E1200C9CFDB /* NumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCell.xib; sourceTree = "<group>"; };
 		67819DFBA822DEDCFEB49C33 /* Pods-CovidAcil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidAcil.debug.xcconfig"; path = "Target Support Files/Pods-CovidAcil/Pods-CovidAcil.debug.xcconfig"; sourceTree = "<group>"; };
 		7FD6537BE2E7DD3AC2F7D55E /* Pods-CovidAcil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidAcil.release.xcconfig"; path = "Target Support Files/Pods-CovidAcil/Pods-CovidAcil.release.xcconfig"; sourceTree = "<group>"; };
 		C9D8465A70982DFF06F4DA54 /* Pods_CovidAcil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidAcil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +178,12 @@
 			isa = PBXGroup;
 			children = (
 				52DBC609242D10A100C9CFDB /* CallsViewController.swift */,
+				52DBC628242E75F800C9CFDB /* CollectionViewTableViewCell.swift */,
+				52DBC62C242E771F00C9CFDB /* CollectionViewTableViewCell.xib */,
+				52DBC62A242E76B300C9CFDB /* CollectionViewCell.swift */,
+				52DBC62E242E793A00C9CFDB /* CollectionViewCell.xib */,
+				52DBC630242E7DED00C9CFDB /* NumberCell.swift */,
+				52DBC632242E7E1200C9CFDB /* NumberCell.xib */,
 			);
 			path = Calls;
 			sourceTree = "<group>";
@@ -293,13 +311,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DBC633242E7E1200C9CFDB /* NumberCell.xib in Resources */,
 				52DBC5F0242D093000C9CFDB /* Main.storyboard in Resources */,
 				52DBC600242D0D6400C9CFDB /* Localizable.strings in Resources */,
+				52DBC62D242E771F00C9CFDB /* CollectionViewTableViewCell.xib in Resources */,
 				52DBC626242E005500C9CFDB /* OpenSans-SemiBold.ttf in Resources */,
 				52DBC5E1242CEA2500C9CFDB /* LaunchScreen.storyboard in Resources */,
 				52DBC624242E005000C9CFDB /* OpenSans-Bold.ttf in Resources */,
 				52DBC625242E005300C9CFDB /* OpenSans-Regular.ttf in Resources */,
 				52DBC5DB242CEA2500C9CFDB /* Assets.xcassets in Resources */,
+				52DBC62F242E793B00C9CFDB /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +374,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52DBC618242D260600C9CFDB /* CitiesRequest.swift in Sources */,
+				52DBC629242E75F800C9CFDB /* CollectionViewTableViewCell.swift in Sources */,
+				52DBC62B242E76B300C9CFDB /* CollectionViewCell.swift in Sources */,
 				52DBC5F9242D0C1E00C9CFDB /* Utilities.swift in Sources */,
+				52DBC631242E7DEE00C9CFDB /* NumberCell.swift in Sources */,
 				52DBC5EB242D071400C9CFDB /* APIConstants.swift in Sources */,
 				52DBC61E242D273800C9CFDB /* LoadingView.swift in Sources */,
 				52DBC61B242D263100C9CFDB /* CityModel.swift in Sources */,

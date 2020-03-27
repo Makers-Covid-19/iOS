@@ -15,14 +15,24 @@ final class CallsViewController: MasterViewController {
     @IBOutlet weak var cityView: UIView!
     @IBOutlet weak var districtView: UIView!
     @IBOutlet weak var districtLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var cityList : [CityModel] = []
     var districtList : [CityModel] = []
     var cityId = 0
     var districtId = 0
+    
+    var cardCount = 6
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.tableFooterView = UIView()
+        self.tableView.register(UINib(nibName: "NumberCell", bundle: nil), forCellReuseIdentifier: "NumberCell")
+        self.tableView.register(UINib(nibName: "CollectionViewTableViewCell", bundle: nil), forCellReuseIdentifier: "CollectionViewTableViewCell")
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+        tableView.reloadData()
         
         cityLabel.text = getLocalizedStringForKey("select_city")
         districtLabel.text = getLocalizedStringForKey("select_district")
@@ -107,7 +117,70 @@ final class CallsViewController: MasterViewController {
     }
     
     @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) {
-        print("Unwind to Root View Controller")
+
     }
 
+}
+
+extension CallsViewController: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (indexPath.section == 0){
+            let height : Int = cardCount / 2
+            return CGFloat((height * 170) + (height * 10))
+        }
+        else{
+            return UITableView.automaticDimension
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (section == 0){
+            return 1
+        }
+        else{
+            return 3
+        }
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if (indexPath.section == 0){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionViewTableViewCell", for: indexPath) as! CollectionViewTableViewCell
+            cell.selectionStyle = .none
+            cell.setData()
+            cell.removeMargins()
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NumberCell", for: indexPath) as! NumberCell
+            cell.selectionStyle = .none
+            cell.removeMargins()
+            return cell
+        }
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if (section == 0){
+            return ""
+        }
+        else if (section == 1){
+            return getLocalizedStringForKey("numbers")
+        }
+        else{
+            return getLocalizedStringForKey("general")
+        }
+    }
+
+}
+
+extension CallsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor.clear
+    }
+    
 }

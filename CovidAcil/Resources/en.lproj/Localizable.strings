@@ -25,6 +25,8 @@
 /* Call */
 "select_city" = "Şehir Seçin";
 "select_district" = "İlçe Seçin";
+"numbers" = "Numaralar";
+"general" = "Ülke Geneli";
 
 /* Settings */
 "recommend_us" = "Arkadaşlarınıza bizi tavsiye edin";

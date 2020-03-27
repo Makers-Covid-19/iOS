@@ -130,11 +130,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eqh-Pr-Uey">
+                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vJY-fz-A1T" id="O5T-HT-bbE"/>
+                                    <outlet property="delegate" destination="vJY-fz-A1T" id="b8x-JW-kBa"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bjQ-Rp-JWT" firstAttribute="top" secondItem="i3M-vD-BLc" secondAttribute="top" constant="10" id="14i-YC-UqR"/>
+                            <constraint firstItem="eqh-Pr-Uey" firstAttribute="leading" secondItem="i3M-vD-BLc" secondAttribute="leading" id="FTf-sh-5zV"/>
                             <constraint firstItem="Us4-j9-lBz" firstAttribute="height" secondItem="kI7-KO-Usi" secondAttribute="height" multiplier="0.5" id="Kcf-ay-iQX"/>
+                            <constraint firstItem="i3M-vD-BLc" firstAttribute="trailing" secondItem="eqh-Pr-Uey" secondAttribute="trailing" id="Ms1-uS-xk7"/>
+                            <constraint firstAttribute="bottom" secondItem="eqh-Pr-Uey" secondAttribute="bottom" id="P5b-4Q-ryy"/>
+                            <constraint firstItem="eqh-Pr-Uey" firstAttribute="top" secondItem="T31-BK-oGH" secondAttribute="bottom" constant="15" id="Qmd-LJ-cZH"/>
                             <constraint firstItem="bjQ-Rp-JWT" firstAttribute="centerY" secondItem="T31-BK-oGH" secondAttribute="centerY" id="QsM-kO-F1E"/>
                             <constraint firstItem="bjQ-Rp-JWT" firstAttribute="leading" secondItem="T31-BK-oGH" secondAttribute="trailing" constant="10" id="SoJ-3U-MMO"/>
                             <constraint firstItem="T31-BK-oGH" firstAttribute="top" secondItem="i3M-vD-BLc" secondAttribute="top" constant="15" id="Ynx-eC-Aqn"/>
@@ -157,6 +169,7 @@
                         <outlet property="cityView" destination="zhZ-he-yUj" id="ILh-UH-IKA"/>
                         <outlet property="districtLabel" destination="wrp-fl-AKq" id="bPD-mt-03k"/>
                         <outlet property="districtView" destination="DyJ-bA-naF" id="LxD-Wv-C4G"/>
+                        <outlet property="tableView" destination="eqh-Pr-Uey" id="db0-Lf-10W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSd-fk-YYW" sceneMemberID="firstResponder"/>
@@ -284,7 +297,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA9-DC-wBa">
                                         <rect key="frame" x="95.5" y="217" width="129.5" height="16.5"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Ayvalik Yerel Insiyatif">
+                                            <fragment content="Ayvalık Yerel İnsiyatif">
                                                 <attributes>
                                                     <color key="NSColor" red="0.12549019610000001" green="0.1843137255" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="14" name="OpenSans-Regular"/>
