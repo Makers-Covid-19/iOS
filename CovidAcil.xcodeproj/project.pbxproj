@@ -17,11 +17,9 @@
 		52DBC5F7242D0BFC00C9CFDB /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC5F6242D0BFC00C9CFDB /* UserDefaultsManager.swift */; };
 		52DBC5F9242D0C1E00C9CFDB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC5F8242D0C1E00C9CFDB /* Utilities.swift */; };
 		52DBC5FB242D0CC900C9CFDB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC5FA242D0CC900C9CFDB /* MasterViewController.swift */; };
-		52DBC5FD242D0CE600C9CFDB /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC5FC242D0CE600C9CFDB /* CustomTabBarController.swift */; };
 		52DBC600242D0D6400C9CFDB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC602242D0D6400C9CFDB /* Localizable.strings */; };
 		52DBC607242D0F8B00C9CFDB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC605242D0F8B00C9CFDB /* Model.xcdatamodeld */; };
 		52DBC60A242D10A100C9CFDB /* CallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC609242D10A100C9CFDB /* CallsViewController.swift */; };
-		52DBC60D242D117100C9CFDB /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC60C242D117100C9CFDB /* ContactsViewController.swift */; };
 		52DBC610242D13B100C9CFDB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC60F242D13B100C9CFDB /* SettingsViewController.swift */; };
 		52DBC612242D259500C9CFDB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC611242D259500C9CFDB /* APIManager.swift */; };
 		52DBC614242D25B400C9CFDB /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC613242D25B400C9CFDB /* APIRequest.swift */; };
@@ -48,13 +46,11 @@
 		52DBC5F6242D0BFC00C9CFDB /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		52DBC5F8242D0C1E00C9CFDB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		52DBC5FA242D0CC900C9CFDB /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		52DBC5FC242D0CE600C9CFDB /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		52DBC601242D0D6400C9CFDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52DBC603242D0D9200C9CFDB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		52DBC604242D0D9200C9CFDB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52DBC606242D0F8B00C9CFDB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		52DBC609242D10A100C9CFDB /* CallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewController.swift; sourceTree = "<group>"; };
-		52DBC60C242D117100C9CFDB /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		52DBC60F242D13B100C9CFDB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		52DBC611242D259500C9CFDB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		52DBC613242D25B400C9CFDB /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
@@ -148,21 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				52DBC5FA242D0CC900C9CFDB /* MasterViewController.swift */,
-				52DBC5FC242D0CE600C9CFDB /* CustomTabBarController.swift */,
-				52DBC5EE242D091E00C9CFDB /* Main */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		52DBC5EE242D091E00C9CFDB /* Main */ = {
-			isa = PBXGroup;
-			children = (
 				52DBC5EF242D093000C9CFDB /* Main.storyboard */,
 				52DBC608242D109500C9CFDB /* Calls */,
-				52DBC60B242D114D00C9CFDB /* Contacts */,
 				52DBC60E242D13A000C9CFDB /* Settings */,
 			);
-			path = Main;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		52DBC5F1242D0BBE00C9CFDB /* Helpers */ = {
@@ -182,14 +168,6 @@
 				52DBC609242D10A100C9CFDB /* CallsViewController.swift */,
 			);
 			path = Calls;
-			sourceTree = "<group>";
-		};
-		52DBC60B242D114D00C9CFDB /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
-				52DBC60C242D117100C9CFDB /* ContactsViewController.swift */,
-			);
-			path = Contacts;
 			sourceTree = "<group>";
 		};
 		52DBC60E242D13A000C9CFDB /* Settings */ = {
@@ -376,11 +354,9 @@
 			files = (
 				52DBC618242D260600C9CFDB /* CitiesRequest.swift in Sources */,
 				52DBC5F9242D0C1E00C9CFDB /* Utilities.swift in Sources */,
-				52DBC60D242D117100C9CFDB /* ContactsViewController.swift in Sources */,
 				52DBC5EB242D071400C9CFDB /* APIConstants.swift in Sources */,
 				52DBC61E242D273800C9CFDB /* LoadingView.swift in Sources */,
 				52DBC61B242D263100C9CFDB /* CityModel.swift in Sources */,
-				52DBC5FD242D0CE600C9CFDB /* CustomTabBarController.swift in Sources */,
 				52DBC5F7242D0BFC00C9CFDB /* UserDefaultsManager.swift in Sources */,
 				52DBC60A242D10A100C9CFDB /* CallsViewController.swift in Sources */,
 				52DBC5D5242CEA2000C9CFDB /* AppDelegate.swift in Sources */,

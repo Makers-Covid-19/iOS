@@ -28,7 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.barTintColor = UIColor.init(hex: themeColor)
         navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.font: getMediumFont(punto: 18), NSAttributedString.Key.foregroundColor: UIColor.white]
         
-        let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomTabBarController") as! CustomTabBarController
+        let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CallsViewController") as! CallsViewController
+//        let navigationController: UINavigationController
+//        navigationController = UINavigationController(rootViewController: rootViewController)
+//        self.window?.rootViewController = navigationController
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
         
