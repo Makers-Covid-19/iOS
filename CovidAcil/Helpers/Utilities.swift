@@ -65,6 +65,10 @@ func directionsAction(title: String, coordinate: CLLocationCoordinate2D) {
     MKMapItem.openMaps(with: [mapItem], launchOptions: launchOptions)
 }
 
+func getSansFont(punto: CGFloat) -> UIFont {
+    return UIFont(name: "OpenSans-Regular", size: punto) ?? UIFont.systemFont(ofSize: punto, weight: UIFont.Weight.regular)
+}
+
 func getRegularFont(punto: CGFloat) -> UIFont {
     return UIFont(name: "HelveticaNeue-Regular", size: punto) ?? UIFont.systemFont(ofSize: punto, weight: UIFont.Weight.regular)
 }

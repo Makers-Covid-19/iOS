@@ -40,7 +40,7 @@ final class LoadingView: UIView {
         
         let label: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: bottomView.frame.size.width, height: bottomView.frame.size.height))
         label.tag = 1006
-        label.font = getRegularFont(punto: 17)
+        label.font = getSansFont(punto: 17)
         label.font = UIFont(name: label.font!.fontName, size: label.font!.pointSize + (isDeviceiPad() ? 3 : 0))
         label.textColor = UIColor.init(hex: themeColor)
         label.textAlignment = .center

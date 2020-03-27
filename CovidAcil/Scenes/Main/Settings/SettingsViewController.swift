@@ -10,6 +10,15 @@ import UIKit
 
 final class SettingsViewController: MasterViewController {
 
+    @IBOutlet weak var fromLabel: UILabel!
+    @IBOutlet weak var govLabel: UILabel!
+    @IBOutlet weak var followLabel: UILabel!
+    @IBOutlet weak var notificationSwitch: UISwitch!
+    @IBOutlet weak var notificationsLabel: UILabel!
+    @IBOutlet weak var recommendView: UIView!
+    @IBOutlet weak var recommendLabel: UILabel!
+    @IBOutlet weak var settingsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +33,11 @@ final class SettingsViewController: MasterViewController {
     }
     
     func prepareView() {
-        
+        settingsLabel.text = getLocalizedStringForKey("settings")
+        govLabel.text = getLocalizedStringForKey("government")
+        followLabel.text = getLocalizedStringForKey("follow_us")
+        notificationsLabel.text = getLocalizedStringForKey("notifications")
+        recommendLabel.text = getLocalizedStringForKey("recommend_us")
+        fromLabel.text = getLocalizedStringForKey("from")
     }
 }

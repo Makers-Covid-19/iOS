@@ -29,6 +29,9 @@
 		52DBC61B242D263100C9CFDB /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC61A242D263100C9CFDB /* CityModel.swift */; };
 		52DBC61E242D273800C9CFDB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC61D242D273800C9CFDB /* LoadingView.swift */; };
 		52DBC620242D572000C9CFDB /* DistrictRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC61F242D572000C9CFDB /* DistrictRequest.swift */; };
+		52DBC624242E005000C9CFDB /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC622242DFD2500C9CFDB /* OpenSans-Bold.ttf */; };
+		52DBC625242E005300C9CFDB /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC623242DFD2500C9CFDB /* OpenSans-Regular.ttf */; };
+		52DBC626242E005500C9CFDB /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC621242DFD2500C9CFDB /* OpenSans-SemiBold.ttf */; };
 		8FA31727844052444E53CA62 /* Pods_CovidAcil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D8465A70982DFF06F4DA54 /* Pods_CovidAcil.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		52DBC61A242D263100C9CFDB /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		52DBC61D242D273800C9CFDB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		52DBC61F242D572000C9CFDB /* DistrictRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictRequest.swift; sourceTree = "<group>"; };
+		52DBC621242DFD2500C9CFDB /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		52DBC622242DFD2500C9CFDB /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		52DBC623242DFD2500C9CFDB /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		67819DFBA822DEDCFEB49C33 /* Pods-CovidAcil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidAcil.debug.xcconfig"; path = "Target Support Files/Pods-CovidAcil/Pods-CovidAcil.debug.xcconfig"; sourceTree = "<group>"; };
 		7FD6537BE2E7DD3AC2F7D55E /* Pods-CovidAcil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidAcil.release.xcconfig"; path = "Target Support Files/Pods-CovidAcil/Pods-CovidAcil.release.xcconfig"; sourceTree = "<group>"; };
 		C9D8465A70982DFF06F4DA54 /* Pods_CovidAcil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidAcil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +128,7 @@
 		52DBC5E8242CECB500C9CFDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				52DBC627242E019500C9CFDB /* Fonts */,
 				52DBC5DA242CEA2500C9CFDB /* Assets.xcassets */,
 				52DBC602242D0D6400C9CFDB /* Localizable.strings */,
 			);
@@ -229,6 +236,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		52DBC627242E019500C9CFDB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				52DBC622242DFD2500C9CFDB /* OpenSans-Bold.ttf */,
+				52DBC623242DFD2500C9CFDB /* OpenSans-Regular.ttf */,
+				52DBC621242DFD2500C9CFDB /* OpenSans-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		55B8781D3661D5955B2127B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,7 +317,10 @@
 			files = (
 				52DBC5F0242D093000C9CFDB /* Main.storyboard in Resources */,
 				52DBC600242D0D6400C9CFDB /* Localizable.strings in Resources */,
+				52DBC626242E005500C9CFDB /* OpenSans-SemiBold.ttf in Resources */,
 				52DBC5E1242CEA2500C9CFDB /* LaunchScreen.storyboard in Resources */,
+				52DBC624242E005000C9CFDB /* OpenSans-Bold.ttf in Resources */,
+				52DBC625242E005300C9CFDB /* OpenSans-Regular.ttf in Resources */,
 				52DBC5DB242CEA2500C9CFDB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

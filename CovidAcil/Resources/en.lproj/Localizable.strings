@@ -25,3 +25,10 @@
 /* Call */
 "select_city" = "Şehir Seçin";
 "select_district" = "İlçe Seçin";
+
+/* Settings */
+"recommend_us" = "Arkadaşlarınıza bizi tavsiye edin";
+"notifications" = "Bildirimler";
+"follow_us" = "TAKİP EDİN";
+"government" = "Belediye";
+"from" = "Covid-19 Gönüllüsü bir grup developer";
