@@ -10,6 +10,10 @@ import UIKit
 
 class NumberCell: UITableViewCell {
 
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
@@ -22,4 +26,9 @@ class NumberCell: UITableViewCell {
         super.awakeFromNib()
     }
     
+    func setData(model : Phone){
+        titleLabel.text = model.name
+        descLabel.text = model.category.name
+        phoneLabel.text = model.phone
+    }
 }

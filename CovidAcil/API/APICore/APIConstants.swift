@@ -11,6 +11,7 @@ import Foundation
 let baseURL = ""
 let getCitiesUrl = "https://rocky-reef-05857.herokuapp.com/api/v0/provinces"
 let getDistrictsUrl = "https://rocky-reef-05857.herokuapp.com/api/v0/districts/"
+let getNumbersUrl = "https://rocky-reef-05857.herokuapp.com/api/v0/phones/id?district_id="
 
 public enum HTTPMethod: String {
     case get = "GET"

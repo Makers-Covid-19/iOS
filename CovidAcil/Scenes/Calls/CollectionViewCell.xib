@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhC-Le-cOI">
-                        <rect key="frame" x="7" y="5" width="236" height="170"/>
+                        <rect key="frame" x="7" y="5" width="236" height="191"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping_icon" translatesAutoresizingMaskIntoConstraints="NO" id="NKg-lY-dwM">
-                                <rect key="frame" x="85.5" y="15" width="65" height="65"/>
+                                <rect key="frame" x="85.5" y="27" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="adz-Fc-hkz"/>
                                     <constraint firstAttribute="height" constant="65" id="q2R-Us-wme"/>
@@ -31,12 +31,12 @@
                                 <rect key="frame" x="204" y="10" width="22" height="21"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="YrE-1O-TUf">
-                                <rect key="frame" x="5" y="81" width="226" height="21"/>
+                                <rect key="frame" x="5" y="93" width="226" height="22.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="444 10 66">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="18" name="OpenSans-Bold"/>
+                                            <color key="NSColor" red="0.12549019610000001" green="0.1843137255" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="OpenSans-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -44,11 +44,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0xi-af-vat">
-                                <rect key="frame" x="5" y="99" width="226" height="14"/>
+                                <rect key="frame" x="5" y="115.5" width="226" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Tüm İhtiyaçlar">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="NSColor" red="0.12549019610000001" green="0.1843137255" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="OpenSans-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -57,13 +57,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-wm-IGE">
-                                <rect key="frame" x="5" y="110" width="226" height="14"/>
+                                <rect key="frame" x="5" y="129.5" width="226" height="13"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Buyuksehır Beledıye Genel Cagrı Merkezı">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <color key="NSColor" red="0.12549019610000001" green="0.1843137255" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="11" name="OpenSans-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -81,11 +81,11 @@
                             <constraint firstItem="b3n-UC-ZUU" firstAttribute="top" secondItem="MhC-Le-cOI" secondAttribute="top" constant="10" id="bVm-Cf-P4Z"/>
                             <constraint firstAttribute="trailing" secondItem="b3n-UC-ZUU" secondAttribute="trailing" constant="10" id="cee-ek-lhx"/>
                             <constraint firstItem="NKg-lY-dwM" firstAttribute="centerX" secondItem="MhC-Le-cOI" secondAttribute="centerX" id="gWk-Or-t8P"/>
-                            <constraint firstAttribute="height" constant="170" id="kIY-dY-4XY"/>
+                            <constraint firstAttribute="height" constant="191" id="kIY-dY-4XY"/>
                             <constraint firstItem="0xi-af-vat" firstAttribute="leading" secondItem="MhC-Le-cOI" secondAttribute="leading" constant="5" id="srF-sE-JYa"/>
-                            <constraint firstItem="NKg-lY-dwM" firstAttribute="top" secondItem="MhC-Le-cOI" secondAttribute="top" constant="15" id="uJE-FZ-xAJ"/>
-                            <constraint firstItem="YrE-1O-TUf" firstAttribute="bottom" secondItem="0xi-af-vat" secondAttribute="top" constant="3" id="wfi-21-Fk8"/>
-                            <constraint firstItem="0xi-af-vat" firstAttribute="bottom" secondItem="HiV-wm-IGE" secondAttribute="top" constant="3" id="xHu-5i-w73"/>
+                            <constraint firstItem="NKg-lY-dwM" firstAttribute="top" secondItem="MhC-Le-cOI" secondAttribute="top" constant="27" id="uJE-FZ-xAJ"/>
+                            <constraint firstItem="YrE-1O-TUf" firstAttribute="bottom" secondItem="0xi-af-vat" secondAttribute="top" id="wfi-21-Fk8"/>
+                            <constraint firstItem="0xi-af-vat" firstAttribute="bottom" secondItem="HiV-wm-IGE" secondAttribute="top" id="xHu-5i-w73"/>
                             <constraint firstAttribute="trailing" secondItem="0xi-af-vat" secondAttribute="trailing" constant="5" id="xn2-hX-A5T"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -113,7 +113,10 @@
             </collectionViewCellContentView>
             <size key="customSize" width="250" height="235"/>
             <connections>
-                <outlet property="label" destination="YrE-1O-TUf" id="Bwu-7v-cQk"/>
+                <outlet property="categoryLabel" destination="0xi-af-vat" id="IBf-yh-VGE"/>
+                <outlet property="descLabel" destination="HiV-wm-IGE" id="kUJ-tA-QJs"/>
+                <outlet property="icon" destination="NKg-lY-dwM" id="XJt-Va-Ghy"/>
+                <outlet property="phoneLabel" destination="YrE-1O-TUf" id="fbo-JX-VWb"/>
             </connections>
             <point key="canvasLocation" x="276.81159420289856" y="215.29017857142856"/>
         </collectionViewCell>

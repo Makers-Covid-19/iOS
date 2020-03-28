@@ -97,6 +97,11 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="descLabel" destination="Jwb-1M-whp" id="KNK-7g-vaq"/>
+                <outlet property="phoneLabel" destination="iwn-s5-JGp" id="e3t-bq-o9H"/>
+                <outlet property="titleLabel" destination="vkp-2u-tpP" id="wMV-7x-sES"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="173.4375"/>
         </tableViewCell>
     </objects>

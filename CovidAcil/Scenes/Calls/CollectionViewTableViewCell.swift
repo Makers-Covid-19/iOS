@@ -12,6 +12,8 @@ class CollectionViewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    var phoneList : [Phone] = []
  
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -25,7 +27,8 @@ class CollectionViewTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func setData(){
+    func setData(phoneList : [Phone]){
+        self.phoneList = phoneList
         collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -41,11 +44,12 @@ extension CollectionViewTableViewCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return phoneList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        cell.setData(model: phoneList[indexPath.row])
         return cell
     }
 }
@@ -60,6 +64,6 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate {
 extension CollectionViewTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width / 2.1, height: 170)
+        return CGSize(width: collectionView.frame.size.width / 2.1, height: 191)
     }
 }

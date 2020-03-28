@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52CBD641242F492A001819D4 /* GetNumbersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBD640242F492A001819D4 /* GetNumbersRequest.swift */; };
+		52CBD643242F4B0F001819D4 /* NumbersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBD642242F4B0F001819D4 /* NumbersModel.swift */; };
 		52DBC5D5242CEA2000C9CFDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC5D4242CEA2000C9CFDB /* AppDelegate.swift */; };
 		52DBC5DB242CEA2500C9CFDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC5DA242CEA2500C9CFDB /* Assets.xcassets */; };
 		52DBC5E1242CEA2500C9CFDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC5DF242CEA2500C9CFDB /* LaunchScreen.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52CBD640242F492A001819D4 /* GetNumbersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNumbersRequest.swift; sourceTree = "<group>"; };
+		52CBD642242F4B0F001819D4 /* NumbersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersModel.swift; sourceTree = "<group>"; };
 		52DBC5D1242CEA2000C9CFDB /* CovidAcil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidAcil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DBC5D4242CEA2000C9CFDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DBC5DA242CEA2500C9CFDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 				7FD6537BE2E7DD3AC2F7D55E /* Pods-CovidAcil.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		52CBD63F242F48F3001819D4 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				52CBD640242F492A001819D4 /* GetNumbersRequest.swift */,
+				52CBD642242F4B0F001819D4 /* NumbersModel.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		52DBC5C8242CEA1F00C9CFDB = {
@@ -210,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				52DBC619242D262200C9CFDB /* City */,
+				52CBD63F242F48F3001819D4 /* New Group */,
 			);
 			path = APIModel;
 			sourceTree = "<group>";
@@ -390,8 +404,10 @@
 				52DBC5FB242D0CC900C9CFDB /* MasterViewController.swift in Sources */,
 				52DBC612242D259500C9CFDB /* APIManager.swift in Sources */,
 				52DBC5F5242D0BE600C9CFDB /* Extensions.swift in Sources */,
+				52CBD643242F4B0F001819D4 /* NumbersModel.swift in Sources */,
 				52DBC610242D13B100C9CFDB /* SettingsViewController.swift in Sources */,
 				52DBC620242D572000C9CFDB /* DistrictRequest.swift in Sources */,
+				52CBD641242F492A001819D4 /* GetNumbersRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
