@@ -57,7 +57,19 @@ extension CollectionViewTableViewCell: UICollectionViewDataSource {
 extension CollectionViewTableViewCell: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("selected collectionViewCell with indexPath: \(indexPath)")
+        var phoneNumber: String = "tel://"
+        phoneNumber = phoneNumber + phoneList[indexPath.row].phone
+        let whiteSpaces: CharacterSet = CharacterSet.whitespaces
+        let noEmptyStrings: NSPredicate = NSPredicate(format: "SELF != ''")
+        let parts: NSArray = phoneNumber.components(separatedBy: whiteSpaces) as NSArray
+        let filteredArray = parts.filtered(using: noEmptyStrings) as NSArray
+        phoneNumber = filteredArray.componentsJoined(by: "")
+        if let phoneCallURL: URL = URL(string: phoneNumber) {
+            let application: UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
     }
 }
 

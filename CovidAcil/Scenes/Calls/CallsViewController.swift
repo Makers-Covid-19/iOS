@@ -185,10 +185,36 @@ extension CallsViewController: UITableViewDataSource {
             return ""
         }
     }
+    
+    
 
 }
 
 extension CallsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var phoneNumber: String = "tel://"
+        if (indexPath.section == 1){
+            phoneNumber = phoneNumber + numbersModel.publicPhones[indexPath.row].phone
+        }
+        else{
+            phoneNumber = phoneNumber + numbersModel.globalPhones[indexPath.row].phone
+        }
+        let whiteSpaces: CharacterSet = CharacterSet.whitespaces
+        let noEmptyStrings: NSPredicate = NSPredicate(format: "SELF != ''")
+        let parts: NSArray = phoneNumber.components(separatedBy: whiteSpaces) as NSArray
+        let filteredArray = parts.filtered(using: noEmptyStrings) as NSArray
+        phoneNumber = filteredArray.componentsJoined(by: "")
+        
+        if (indexPath.section != 0){
+            if let phoneCallURL: URL = URL(string: phoneNumber) {
+                let application: UIApplication = UIApplication.shared
+                if (application.canOpenURL(phoneCallURL)) {
+                    application.open(phoneCallURL, options: [:], completionHandler: nil)
+                }
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = UIColor.clear

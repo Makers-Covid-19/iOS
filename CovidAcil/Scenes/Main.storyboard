@@ -312,18 +312,30 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGF-Xu-Ga9">
                                                 <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
                                                 <state key="normal" image="facebook_icon"/>
+                                                <connections>
+                                                    <action selector="ayvFB" destination="t2c-Gu-j8A" eventType="touchUpInside" id="WQk-ge-d9N"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i84-mC-LD6">
                                                 <rect key="frame" x="60" y="0.0" width="42" height="43"/>
                                                 <state key="normal" image="twitter_icon"/>
+                                                <connections>
+                                                    <action selector="ayvTwitter" destination="t2c-Gu-j8A" eventType="touchUpInside" id="imf-Fc-NjO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-WN-SgZ">
                                                 <rect key="frame" x="119" y="0.0" width="43" height="43"/>
                                                 <state key="normal" image="instagram_icon"/>
+                                                <connections>
+                                                    <action selector="ayvInstagram" destination="t2c-Gu-j8A" eventType="touchUpInside" id="M4R-l6-cqx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhO-DU-1Ou">
                                                 <rect key="frame" x="179" y="0.0" width="43" height="43"/>
                                                 <state key="normal" image="whatsapp_icon"/>
+                                                <connections>
+                                                    <action selector="ayvWhatsapp" destination="t2c-Gu-j8A" eventType="touchUpInside" id="Y9Q-kL-hDe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -340,15 +352,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOY-ow-1gY">
-                                        <rect key="frame" x="108.5" y="336" width="103" height="43"/>
+                                        <rect key="frame" x="79" y="336" width="162" height="43"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfP-zE-kab">
                                                 <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
                                                 <state key="normal" image="facebook_icon"/>
+                                                <connections>
+                                                    <action selector="govFB" destination="t2c-Gu-j8A" eventType="touchUpInside" id="6ab-mC-B25"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdO-uA-V3Y">
+                                                <rect key="frame" x="60" y="0.0" width="42" height="43"/>
+                                                <state key="normal" image="twitter_icon"/>
+                                                <connections>
+                                                    <action selector="govTwitter" destination="t2c-Gu-j8A" eventType="touchUpInside" id="qWk-sJ-VxE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIF-AU-jMW">
-                                                <rect key="frame" x="60" y="0.0" width="43" height="43"/>
+                                                <rect key="frame" x="119" y="0.0" width="43" height="43"/>
                                                 <state key="normal" image="whatsapp_icon"/>
+                                                <connections>
+                                                    <action selector="govWhatsapp" destination="t2c-Gu-j8A" eventType="touchUpInside" id="Ay2-PL-rpC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
