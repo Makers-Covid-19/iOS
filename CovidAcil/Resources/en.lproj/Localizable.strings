@@ -7,30 +7,32 @@
 */
 
 /* Generic */
-"done" = "Tamam";
-"all" = "Tümü";
-"save" = "Kaydet";
-"cancel" = "İptal";
-"edit" = "Düzenle";
-"add" = "Ekle";
-"delete" = "Sil";
-"loading" = "Yükleniyor...";
-"search" = "Ara";
+"done" = "Done";
+"all" = "All";
+"save" = "Save";
+"cancel" = "Cancel";
+"edit" = "Edit";
+"add" = "Add";
+"delete" = "Delete";
+"loading" = "Loading...";
+"search" = "Search";
 
 /* Main */
-"calls" = "Aramalar";
-"my_contacts" = "Rehberim";
-"settings" = "Ayarlar";
+"calls" = "Calls";
+"my_contacts" = "My Contacts";
+"settings" = "Settings";
 
 /* Call */
-"select_city" = "Şehir Seçin";
-"select_district" = "İlçe Seçin";
-"numbers" = "Numaralar";
-"general" = "Ülke Geneli";
+"select_city" = "Select City";
+"select_district" = "Select District";
+"numbers" = "Local Numbers";
+"general" = "General Numbers";
 
 /* Settings */
-"recommend_us" = "Arkadaşlarınıza bizi tavsiye edin";
-"notifications" = "Bildirimler";
-"follow_us" = "TAKİP EDİN";
-"government" = "Belediye";
-"from" = "Covid-19 Gönüllüsü bir grup developer";
+"recommend_us" = "Recommend us to your friends";
+"notifications" = "Notifications";
+"follow_us" = "FOLLOW US";
+"government" = "Government";
+"from" = "A group of voluntary developers for Covid-19";
+"share" = "Share";
+"share_text" = "Covid-Emergency application:";

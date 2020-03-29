@@ -19,9 +19,11 @@ final class SettingsViewController: MasterViewController {
     @IBOutlet weak var recommendLabel: UILabel!
     @IBOutlet weak var settingsLabel: UILabel!
     
+    //MARK: - TODO LINK CHANGE
+    let iTunesURL: String = "https://itunes.apple.com/app/..."
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         prepareView()
     }
     
@@ -39,89 +41,58 @@ final class SettingsViewController: MasterViewController {
         notificationsLabel.text = getLocalizedStringForKey("notifications")
         recommendLabel.text = getLocalizedStringForKey("recommend_us")
         fromLabel.text = getLocalizedStringForKey("from")
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.shareApp))
+        recommendView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func shareApp (sender : UITapGestureRecognizer){
+        let webURL = URL(string: iTunesURL)
+        let activityViewController = UIActivityViewController(activityItems: [getLocalizedStringForKey("share_text"), webURL!], applicationActivities: nil)
+        present(activityViewController, animated: true)
+    }
+    
+    func openApp(applicationUrl : String, websiteUrl : String){
+        let appURL = URL(string: applicationUrl)!
+        let application = UIApplication.shared
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        }
+        else {
+            let webURL = URL(string: websiteUrl)!
+            application.open(webURL)
+        }
     }
     
     //MARK: - Local
     
     @IBAction func ayvFB(){
-        let appURL = URL(string: "fb://user?screen_name=ayvalikyerelinisiyatif")!
-        let application = UIApplication.shared
-        if application.canOpenURL(appURL) {
-            application.open(appURL)
-        }
-        else {
-            let webURL = URL(string: "https://www.facebook.com/ayvalikyerelinisiyatif")!
-            application.open(webURL)
-        }
+        openApp(applicationUrl: "fb://user?screen_name=ayvalikyerelinisiyatif", websiteUrl: "https://www.facebook.com/ayvalikyerelinisiyatif")
     }
     
     @IBAction func ayvTwitter(){
-        let appURL = URL(string: "twitter://user?screen_name=ayvalikyerel")!
-        let application = UIApplication.shared
-        if application.canOpenURL(appURL) {
-            application.open(appURL)
-        }
-        else {
-            let webURL = URL(string: "https://twitter.com/ayvalikyerel")!
-            application.open(webURL)
-        }
+        openApp(applicationUrl: "twitter://user?screen_name=ayvalikyerel", websiteUrl: "https://twitter.com/ayvalikyerel")
     }
     
     @IBAction func ayvInstagram(){
-        let appURL = URL(string: "instagram://user?username=ayvalikyerel")!
-        let application = UIApplication.shared
-        if application.canOpenURL(appURL) {
-            application.open(appURL)
-        }
-        else {
-            let webURL = URL(string: "https://instagram.com/ayvalikyerel")!
-            application.open(webURL)
-        }
+        openApp(applicationUrl: "instagram://user?username=ayvalikyerel", websiteUrl: "https://instagram.com/ayvalikyerel")
     }
     
     @IBAction func ayvWhatsapp(){
-        let appURL = URL(string: "https://api.whatsapp.com/send?phone=+905326682864")!
-        let application = UIApplication.shared
-        if application.canOpenURL(appURL) {
-            application.open(appURL)
-        }
-        else{
-            if let url = URL(string: "tel://05326682864") {
-                UIApplication.shared.open(url)
-            }
-        }
+        openApp(applicationUrl: "https://api.whatsapp.com/send?phone=+905326682864", websiteUrl: "tel://05326682864")
     }
     
     //MARK: - Gov
     
     @IBAction func govFB(){
-        if let url = URL(string: "https://www.facebook.com/AyvalikBelediyesi/") {
-            UIApplication.shared.open(url)
-        }
+        openApp(applicationUrl: "fb://user?screen_name=AyvalikBelediyesi", websiteUrl: "https://www.facebook.com/AyvalikBelediyesi/")
     }
     
     @IBAction func govTwitter(){
-        let appURL = URL(string: "twitter://user?screen_name=AYVALIKBELEDIYE")!
-        let application = UIApplication.shared
-        if application.canOpenURL(appURL) {
-            application.open(appURL)
-        }
-        else {
-            let webURL = URL(string: "https://twitter.com/AYVALIKBELEDIYE")!
-            application.open(webURL)
-        }
+        openApp(applicationUrl: "twitter://user?screen_name=AYVALIKBELEDIYE", websiteUrl: "https://twitter.com/AYVALIKBELEDIYE")
     }
     
     @IBAction func govWhatsapp(){
-        let appURL = URL(string: "https://api.whatsapp.com/send?phone=+905331440099")!
-        let application = UIApplication.shared
-        if application.canOpenURL(appURL) {
-            application.open(appURL)
-        }
-        else{
-            if let url = URL(string: "tel://05331440099") {
-                UIApplication.shared.open(url)
-            }
-        }
+        openApp(applicationUrl: "https://api.whatsapp.com/send?phone=+905331440099", websiteUrl: "tel://05331440099")
     }
 }
