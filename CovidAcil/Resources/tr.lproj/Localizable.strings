@@ -33,6 +33,9 @@
 "notifications" = "Bildirimler";
 "follow_us" = "TAKİP EDİN";
 "government" = "Belediye";
-"from" = "Covid-19 Gönüllüsü bir grup developer";
+"from" = "Pandemi Savaşçıları";
 "share" = "Paylaş";
 "share_text" = "Covid-Acil uygulaması:";
+"english" = "English";
+"turkish" = "Türkçe";
+"language" = "Dil";

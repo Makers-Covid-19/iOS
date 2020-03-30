@@ -33,6 +33,9 @@
 "notifications" = "Notifications";
 "follow_us" = "FOLLOW US";
 "government" = "Government";
-"from" = "A group of voluntary developers for Covid-19";
+"from" = "Pandemic Warriors";
 "share" = "Share";
 "share_text" = "Covid-Emergency application:";
+"english" = "English";
+"turkish" = "Türkçe";
+"language" = "Language";

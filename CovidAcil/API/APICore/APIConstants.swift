@@ -38,8 +38,3 @@ enum HTTPHeaderField: String {
 enum RequestContentType: String {
     case json = "application/json"
 }
-
-let api_headers : HTTPHeaders = [
-    "Accept"          : "application/json",
-    "Content-Type"    : "application/json"
-]

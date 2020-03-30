@@ -35,6 +35,12 @@ func getAppType() -> String {
     return "0"
 }
 
+func setPref(key: String, value: Any) {
+    let userDefaults = UserDefaults.standard
+    userDefaults.set(value, forKey: key)
+    userDefaults.synchronize()
+}
+
 func getLocalizedStringForKey(_ key: String) -> String {
     let path = Bundle.main.path(forResource: getLanguageKey(), ofType: "lproj")
     let bundle = Bundle(path: path!)

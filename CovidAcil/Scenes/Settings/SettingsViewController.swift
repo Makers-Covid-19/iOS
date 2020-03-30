@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import DropDown
 
 final class SettingsViewController: MasterViewController {
 
-    @IBOutlet weak var fromLabel: UILabel!
+    @IBOutlet weak var selectedLanguageLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var languageView: UIView!
     @IBOutlet weak var govLabel: UILabel!
     @IBOutlet weak var followLabel: UILabel!
     @IBOutlet weak var notificationSwitch: UISwitch!
@@ -39,11 +42,57 @@ final class SettingsViewController: MasterViewController {
         govLabel.text = getLocalizedStringForKey("government")
         followLabel.text = getLocalizedStringForKey("follow_us")
         notificationsLabel.text = getLocalizedStringForKey("notifications")
-        recommendLabel.text = getLocalizedStringForKey("recommend_us")
-        fromLabel.text = getLocalizedStringForKey("from")
+        recommendLabel.text = getLocalizedStringForKey("recommend_us")        
+        languageLabel.text = getLocalizedStringForKey("language")
         
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.shareApp))
         recommendView.addGestureRecognizer(gesture)
+        
+        let languageGesture = UITapGestureRecognizer(target: self, action:  #selector(self.languageSelection))
+        languageView.addGestureRecognizer(languageGesture)
+        
+        if getLanguageKey() == "tr" {
+            selectedLanguageLabel.text = getLocalizedStringForKey("turkish")
+        }
+        else {
+            selectedLanguageLabel.text = getLocalizedStringForKey("english")
+        }
+    }
+    
+    func updateLanguage() {
+        let language: String = getLanguageKey()
+        var languageKey: String = "en"
+        if selectedLanguageLabel.text == getLocalizedStringForKey("turkish") {
+            languageKey = "tr"
+        }
+        if (languageKey != language) {
+            setPref(key: LANGUAGE_KEY, value: languageKey)
+            let rV = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CallsViewController") as! CallsViewController
+            guard let window = UIApplication.shared.keyWindow, let rootViewController = window.rootViewController
+            else {
+                return
+            }
+            rV.view.frame = rootViewController.view.frame
+            rV.view.layoutIfNeeded()
+            UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                window.rootViewController = rV
+            })
+        }
+    }
+    
+    @objc func languageSelection (sender : UITapGestureRecognizer){
+        let dropDown = DropDown()
+        dropDown.anchorView = languageView
+        dropDown.dimmedBackgroundColor = UIColor.init(hex: "000000", alpha: 0.5)
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        DropDown.appearance().setupCornerRadius(10)
+        dropDown.dataSource = languages
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.selectedLanguageLabel.text = languages[index]
+            dropDown.hide()
+            self.updateLanguage()
+        }
+        dropDown.show()
     }
     
     @objc func shareApp (sender : UITapGestureRecognizer){
@@ -94,5 +143,10 @@ final class SettingsViewController: MasterViewController {
     
     @IBAction func govWhatsapp(){
         openApp(applicationUrl: "https://api.whatsapp.com/send?phone=+905331440099", websiteUrl: "tel://05331440099")
+    }
+    
+    @IBAction func githubPressed(){
+        let webURL = URL(string: "https://github.com/Makers-Covid-19")!
+        UIApplication.shared.open(webURL)
     }
 }

@@ -9,17 +9,17 @@
 import Foundation
 
 public typealias HTTPBodyParameters = [String : Any]?
-public typealias HTTPHeaders = [String : String]?
+public typealias HTTPHeadersLcl = [String : String]?
 public typealias HTTPUrlParameters = [String : Any]?
 
 class APIRequest: NSObject {
     var endPoint: String!
     var httpMethod: HTTPMethod!
-    var headers = HTTPHeaders([:])
+    var headers = HTTPHeadersLcl([:])
     var bodyParameters: HTTPBodyParameters?
     var urlParameters: HTTPUrlParameters?
     
-    func initAPIRequest(endPoint: String, httpMethod: HTTPMethod, headers: HTTPHeaders?, bodyParameters: HTTPBodyParameters?, urlParameters: HTTPUrlParameters?) {
+    func initAPIRequest(endPoint: String, httpMethod: HTTPMethod, headers: HTTPHeadersLcl?, bodyParameters: HTTPBodyParameters?, urlParameters: HTTPUrlParameters?) {
         self.endPoint = baseURL + endPoint
         self.httpMethod = httpMethod
         self.headers = setHeaders()
@@ -49,8 +49,8 @@ class APIRequest: NSObject {
         }
     }
     
-    private func setHeaders() -> HTTPHeaders {
-        var headerSet = HTTPHeaders([:])
+    private func setHeaders() -> HTTPHeadersLcl {
+        var headerSet = HTTPHeadersLcl([:])
         headerSet?.updateValue(RequestContentType.json.rawValue, forKey: HTTPHeaderField.contentType.rawValue)
         headerSet?.updateValue(RequestContentType.json.rawValue, forKey: HTTPHeaderField.accept.rawValue)
         return headerSet

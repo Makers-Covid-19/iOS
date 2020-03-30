@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.init(hex: purpleColor)
         configureToastView()
         
-        UIApplication.shared.statusBarStyle = .lightContent
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.isTranslucent = false
         navigationBarAppearace.tintColor = UIColor.white
@@ -29,9 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.font: getMediumFont(punto: 18), NSAttributedString.Key.foregroundColor: UIColor.white]
         
         let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CallsViewController") as! CallsViewController
-//        let navigationController: UINavigationController
-//        navigationController = UINavigationController(rootViewController: rootViewController)
-//        self.window?.rootViewController = navigationController
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
         
