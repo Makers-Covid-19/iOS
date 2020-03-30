@@ -214,9 +214,6 @@ extension CallsViewController: UITableViewDataSource {
             return ""
         }
     }
-    
-    
-
 }
 
 extension CallsViewController: UITableViewDelegate {
@@ -250,5 +247,4 @@ extension CallsViewController: UITableViewDelegate {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.init(hex: "bebebe")
     }
-    
 }

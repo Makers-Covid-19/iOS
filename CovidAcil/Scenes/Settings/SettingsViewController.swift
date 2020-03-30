@@ -11,6 +11,7 @@ import DropDown
 
 final class SettingsViewController: MasterViewController {
 
+    @IBOutlet weak var pandemicButton: UIButton!
     @IBOutlet weak var selectedLanguageLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageView: UIView!
@@ -42,7 +43,7 @@ final class SettingsViewController: MasterViewController {
         govLabel.text = getLocalizedStringForKey("government")
         followLabel.text = getLocalizedStringForKey("follow_us")
         notificationsLabel.text = getLocalizedStringForKey("notifications")
-        recommendLabel.text = getLocalizedStringForKey("recommend_us")        
+        recommendLabel.text = getLocalizedStringForKey("recommend_us")
         languageLabel.text = getLocalizedStringForKey("language")
         
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.shareApp))
@@ -52,9 +53,11 @@ final class SettingsViewController: MasterViewController {
         languageView.addGestureRecognizer(languageGesture)
         
         if getLanguageKey() == "tr" {
+            pandemicButton.setImage(UIImage(named: "github_icon_tr"), for: .normal)
             selectedLanguageLabel.text = getLocalizedStringForKey("turkish")
         }
         else {
+            pandemicButton.setImage(UIImage(named: "github_icon"), for: .normal)
             selectedLanguageLabel.text = getLocalizedStringForKey("english")
         }
     }

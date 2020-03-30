@@ -446,7 +446,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TG-fe-2SA">
-                                        <rect key="frame" x="77" y="499.5" width="166" height="68.5"/>
+                                        <rect key="frame" x="70" y="499.5" width="180.5" height="64"/>
                                         <state key="normal" image="github_icon"/>
                                         <connections>
                                             <action selector="githubPressed" destination="t2c-Gu-j8A" eventType="touchUpInside" id="QlU-an-kwN"/>
@@ -495,6 +495,7 @@
                         <outlet property="languageView" destination="uZ8-fC-sw2" id="O8c-4f-yNJ"/>
                         <outlet property="notificationSwitch" destination="Sta-2O-pvP" id="om4-AV-5bI"/>
                         <outlet property="notificationsLabel" destination="t7I-TJ-0Am" id="hFv-Xi-S3E"/>
+                        <outlet property="pandemicButton" destination="3TG-fe-2SA" id="pSh-yx-oXI"/>
                         <outlet property="recommendLabel" destination="Qlf-wm-ryp" id="o4A-vp-iSX"/>
                         <outlet property="recommendView" destination="88u-rV-vwD" id="bf5-6V-PEX"/>
                         <outlet property="selectedLanguageLabel" destination="rIF-Pf-w83" id="jF9-Gf-Nap"/>
@@ -511,7 +512,7 @@
         <image name="back_icon" width="11" height="16"/>
         <image name="drop_down" width="8" height="6"/>
         <image name="facebook_icon" width="43" height="43"/>
-        <image name="github_icon" width="166" height="68.5"/>
+        <image name="github_icon" width="180.5" height="64"/>
         <image name="instagram_icon" width="43" height="43"/>
         <image name="right_icon" width="9" height="16"/>
         <image name="settings_icon" width="30" height="29"/>
