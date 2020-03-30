@@ -22,6 +22,8 @@ final class CallsViewController: MasterViewController {
     var districtList : [CityModel] = []
     var cityId = 0
     var districtId = 0
+    var cityName = ""
+    var districtName = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +36,7 @@ final class CallsViewController: MasterViewController {
         
         cityLabel.text = getLocalizedStringForKey("select_city")
         districtLabel.text = getLocalizedStringForKey("select_district")
-        
+                
         getCitiesRequest()
     }
     
@@ -51,7 +53,17 @@ final class CallsViewController: MasterViewController {
             self.cityList = responseModel
             let cityGesture = UITapGestureRecognizer(target: self, action:  #selector(self.cityAction))
             self.cityView.addGestureRecognizer(cityGesture)
-        }) { (message) in }
+            if (self.cityId == 0 && self.cityList.count > 0){
+                self.cityLabel.text = self.cityList[0].name
+                self.cityName = self.cityList[0].name
+                self.getGeneralNumbersRequest()
+            }
+        }) { (message) in
+            self.numbersModel = UserDefaults.standard.decode(for: NumbersModel.self, using: NUMBER_MODEL)
+            self.cityLabel.text = getPrefString(key: CITY_NAME)
+            self.districtLabel.text = getPrefString(key: DISTRICT_NAME)
+            self.tableView.reloadData()
+        }
     }
     
     @objc func cityAction(sender : UITapGestureRecognizer) {
@@ -68,7 +80,9 @@ final class CallsViewController: MasterViewController {
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.cityLabel.text = self.cityList[index].name
             self.cityId = self.cityList[index].id
+            self.cityName = self.cityList[index].name
             dropDown.hide()
+            self.getGeneralNumbersRequest()
             self.getDistrictsRequest()
             self.numbersModel = NumbersModel.init(majorPhones: [], publicPhones: [], globalPhones: [])
             self.districtLabel.text = getLocalizedStringForKey("select_district")
@@ -100,6 +114,7 @@ final class CallsViewController: MasterViewController {
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.districtLabel.text = self.districtList[index].name
             self.districtId = self.districtList[index].id
+            self.districtName = self.districtList[index].name
             dropDown.hide()
             self.numbersModel = NumbersModel.init(majorPhones: [], publicPhones: [], globalPhones: [])
             self.getNumbersRequest()
@@ -107,11 +122,25 @@ final class CallsViewController: MasterViewController {
         dropDown.show()
     }
     
+    func getGeneralNumbersRequest(){
+        let request: GetGeneralNumbersRequest = GetGeneralNumbersRequest.init(id: cityId)
+        request.APIRequest(succeed: { (responseData, message) in
+            guard let responseModel = try? JSONDecoder().decode(NumbersModel.self, from: responseData) else { return }
+            self.numbersModel = responseModel
+            setPref(key: CITY_NAME, value: self.cityName)
+            setPref(key: DISTRICT_NAME, value: getLocalizedStringForKey("select_district"))
+            UserDefaults.standard.encode(for: self.numbersModel, using: NUMBER_MODEL)
+            self.tableView.reloadData()
+        }) { (message) in }
+    }
+    
     func getNumbersRequest(){
         let request: GetNumbersRequest = GetNumbersRequest.init(id: districtId)
         request.APIRequest(succeed: { (responseData, message) in
             guard let responseModel = try? JSONDecoder().decode(NumbersModel.self, from: responseData) else { return }
             self.numbersModel = responseModel
+            setPref(key: DISTRICT_NAME, value: self.districtName)
+            UserDefaults.standard.encode(for: self.numbersModel, using: NUMBER_MODEL)
             self.tableView.reloadData()
         }) { (message) in }
     }

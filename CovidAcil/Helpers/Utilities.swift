@@ -35,6 +35,21 @@ func getAppType() -> String {
     return "0"
 }
 
+func setObject(key: String, value: Any) {
+    let userDefaults = UserDefaults.standard
+    userDefaults.set(NSKeyedArchiver.archivedData(withRootObject: value), forKey: key)
+    userDefaults.synchronize()
+}
+
+func getNumberModel () -> NumbersModel?{
+    if let data = UserDefaults.standard.data(forKey: NUMBER_MODEL) {
+        return NSKeyedUnarchiver.unarchiveObject(with: data) as? NumbersModel
+    }
+    else {
+        return nil
+    }
+}
+
 func setPref(key: String, value: Any) {
     let userDefaults = UserDefaults.standard
     userDefaults.set(value, forKey: key)
@@ -51,6 +66,13 @@ func getLocalizedStringForKey(_ key: String) -> String {
     else {
         return NSLocalizedString(key, comment: "")
     }
+}
+
+func getPrefString (key : String) -> String {
+    if (UserDefaults.standard.string(forKey: key) != nil){
+        return UserDefaults.standard.string(forKey: key)!
+    }
+    return ""
 }
 
 func getLanguageKey() -> String {

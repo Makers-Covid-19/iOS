@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		52CBD641242F492A001819D4 /* GetNumbersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBD640242F492A001819D4 /* GetNumbersRequest.swift */; };
 		52CBD643242F4B0F001819D4 /* NumbersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBD642242F4B0F001819D4 /* NumbersModel.swift */; };
+		52CBD647243263CD001819D4 /* GetGeneralNumbersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBD646243263CD001819D4 /* GetGeneralNumbersRequest.swift */; };
 		52DBC5D5242CEA2000C9CFDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBC5D4242CEA2000C9CFDB /* AppDelegate.swift */; };
 		52DBC5DB242CEA2500C9CFDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC5DA242CEA2500C9CFDB /* Assets.xcassets */; };
 		52DBC5E1242CEA2500C9CFDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DBC5DF242CEA2500C9CFDB /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		52CBD640242F492A001819D4 /* GetNumbersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNumbersRequest.swift; sourceTree = "<group>"; };
 		52CBD642242F4B0F001819D4 /* NumbersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersModel.swift; sourceTree = "<group>"; };
+		52CBD646243263CD001819D4 /* GetGeneralNumbersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGeneralNumbersRequest.swift; sourceTree = "<group>"; };
 		52DBC5D1242CEA2000C9CFDB /* CovidAcil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidAcil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DBC5D4242CEA2000C9CFDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DBC5DA242CEA2500C9CFDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,13 +104,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		52CBD63F242F48F3001819D4 /* New Group */ = {
+		52CBD63F242F48F3001819D4 /* Number */ = {
 			isa = PBXGroup;
 			children = (
 				52CBD640242F492A001819D4 /* GetNumbersRequest.swift */,
 				52CBD642242F4B0F001819D4 /* NumbersModel.swift */,
+				52CBD646243263CD001819D4 /* GetGeneralNumbersRequest.swift */,
 			);
-			path = "New Group";
+			path = Number;
 			sourceTree = "<group>";
 		};
 		52DBC5C8242CEA1F00C9CFDB = {
@@ -222,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				52DBC619242D262200C9CFDB /* City */,
-				52CBD63F242F48F3001819D4 /* New Group */,
+				52CBD63F242F48F3001819D4 /* Number */,
 			);
 			path = APIModel;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				52DBC61B242D263100C9CFDB /* CityModel.swift in Sources */,
 				52DBC5F7242D0BFC00C9CFDB /* UserDefaultsManager.swift in Sources */,
 				52DBC60A242D10A100C9CFDB /* CallsViewController.swift in Sources */,
+				52CBD647243263CD001819D4 /* GetGeneralNumbersRequest.swift in Sources */,
 				52DBC5D5242CEA2000C9CFDB /* AppDelegate.swift in Sources */,
 				52DBC607242D0F8B00C9CFDB /* Model.xcdatamodeld in Sources */,
 				52DBC614242D25B400C9CFDB /* APIRequest.swift in Sources */,

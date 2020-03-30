@@ -132,7 +132,6 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eqh-Pr-Uey">
                                 <rect key="frame" x="0.0" y="78" width="320" height="490"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vJY-fz-A1T" id="O5T-HT-bbE"/>
                                     <outlet property="delegate" destination="vJY-fz-A1T" id="b8x-JW-kBa"/>

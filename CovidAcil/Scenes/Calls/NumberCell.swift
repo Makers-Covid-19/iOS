@@ -28,7 +28,9 @@ class NumberCell: UITableViewCell {
     
     func setData(model : Phone){
         titleLabel.text = model.name
-        descLabel.text = model.category.name
+        if let category = model.category {
+            descLabel.text = category.name
+        }
         phoneLabel.text = model.phone
     }
 }

@@ -25,6 +25,7 @@ final class APIManager: NSObject {
         if (_APIRequest.httpMethod! == HTTPMethod.get){
             AF.request(_APIRequest.endPoint, method: .get, parameters: _APIRequest.bodyParameters ?? nil, encoding: JSONEncoding(), headers: headers).responseJSON { response in
                 guard let responseData = response.data else {
+                    LoadingView.stopLoading()
                     failed(getLocalizedStringForKey(ResponseError.serverNoData.rawValue))
                     return
                 }

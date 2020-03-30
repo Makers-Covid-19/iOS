@@ -9,6 +9,9 @@
 import UIKit
 
 let LANGUAGE_KEY = "language_key"
+let NUMBER_MODEL = "number_model"
+let CITY_NAME = "city_name"
+let DISTRICT_NAME = "district_name"
 
 let themeColor = "202F5A"
 let blackColor = "1C1A1A"

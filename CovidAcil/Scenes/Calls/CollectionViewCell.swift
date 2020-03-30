@@ -28,8 +28,10 @@ class CollectionViewCell: UICollectionViewCell {
     func setData(model : Phone){
         phoneLabel.text = model.phone
         descLabel.text = model.name
-        categoryLabel.text = model.category.name
-        icon.image = UIImage(named: images[model.category.id])
+        if let category = model.category {
+            categoryLabel.text = category.name
+            icon.image = UIImage(named: images[category.id])
+        }
     }
     
 }
