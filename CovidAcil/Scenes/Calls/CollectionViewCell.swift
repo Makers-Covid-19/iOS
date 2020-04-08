@@ -15,7 +15,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
-    let images : [String] = ["all_needs_icon","grocery_icon","bills_icon","shopping_icon","coordincation_icon","psy_support_icon"]
+    let images : [String] = ["all_needs_icon","grocery_icon","bills_icon","shopping_icon","coordincation_icon","psy_support_icon","coordincation_icon","coordincation_icon","coordincation_icon","coordincation_icon","coordincation_icon","coordincation_icon","coordincation_icon","coordincation_icon"]
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!

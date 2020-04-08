@@ -46,7 +46,7 @@
 		52CBD640242F492A001819D4 /* GetNumbersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNumbersRequest.swift; sourceTree = "<group>"; };
 		52CBD642242F4B0F001819D4 /* NumbersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersModel.swift; sourceTree = "<group>"; };
 		52CBD646243263CD001819D4 /* GetGeneralNumbersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGeneralNumbersRequest.swift; sourceTree = "<group>"; };
-		52DBC5D1242CEA2000C9CFDB /* CovidAcil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidAcil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DBC5D1242CEA2000C9CFDB /* Acil Numaralar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Acil Numaralar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DBC5D4242CEA2000C9CFDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DBC5DA242CEA2500C9CFDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DBC5E0242CEA2500C9CFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		52DBC5D2242CEA2000C9CFDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52DBC5D1242CEA2000C9CFDB /* CovidAcil.app */,
+				52DBC5D1242CEA2000C9CFDB /* Acil Numaralar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,7 +285,7 @@
 			);
 			name = CovidAcil;
 			productName = CovidAcil;
-			productReference = 52DBC5D1242CEA2000C9CFDB /* CovidAcil.app */;
+			productReference = 52DBC5D1242CEA2000C9CFDB /* Acil Numaralar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -568,8 +568,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobilegion.CovidAcil;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilegion.acilnumaralar;
+				PRODUCT_NAME = "Acil Numaralar";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -590,8 +590,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobilegion.CovidAcil;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilegion.acilnumaralar;
+				PRODUCT_NAME = "Acil Numaralar";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
