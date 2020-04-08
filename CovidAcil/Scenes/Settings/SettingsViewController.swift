@@ -15,7 +15,6 @@ final class SettingsViewController: MasterViewController {
     @IBOutlet weak var selectedLanguageLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageView: UIView!
-    @IBOutlet weak var govLabel: UILabel!
     @IBOutlet weak var followLabel: UILabel!
     @IBOutlet weak var notificationSwitch: UISwitch!
     @IBOutlet weak var notificationsLabel: UILabel!
@@ -40,7 +39,6 @@ final class SettingsViewController: MasterViewController {
     
     func prepareView() {
         settingsLabel.text = getLocalizedStringForKey("settings")
-        govLabel.text = getLocalizedStringForKey("government")
         followLabel.text = getLocalizedStringForKey("follow_us")
         notificationsLabel.text = getLocalizedStringForKey("notifications")
         recommendLabel.text = getLocalizedStringForKey("recommend_us")
@@ -132,20 +130,6 @@ final class SettingsViewController: MasterViewController {
     
     @IBAction func ayvWhatsapp(){
         openApp(applicationUrl: "https://api.whatsapp.com/send?phone=+905326682864", websiteUrl: "tel://05326682864")
-    }
-    
-    //MARK: - Gov
-    
-    @IBAction func govFB(){
-        openApp(applicationUrl: "fb://user?screen_name=AyvalikBelediyesi", websiteUrl: "https://www.facebook.com/AyvalikBelediyesi/")
-    }
-    
-    @IBAction func govTwitter(){
-        openApp(applicationUrl: "twitter://user?screen_name=AYVALIKBELEDIYE", websiteUrl: "https://twitter.com/AYVALIKBELEDIYE")
-    }
-    
-    @IBAction func govWhatsapp(){
-        openApp(applicationUrl: "https://api.whatsapp.com/send?phone=+905331440099", websiteUrl: "tel://05331440099")
     }
     
     @IBAction func githubPressed(){
