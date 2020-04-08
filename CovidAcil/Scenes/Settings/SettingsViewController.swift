@@ -22,8 +22,7 @@ final class SettingsViewController: MasterViewController {
     @IBOutlet weak var recommendLabel: UILabel!
     @IBOutlet weak var settingsLabel: UILabel!
     
-    //MARK: - TODO LINK CHANGE
-    let iTunesURL: String = "https://itunes.apple.com/app/..."
+    let iTunesURL: String = "https://apps.apple.com/tr/app/id1506957322"
     
     override func viewDidLoad() {
         super.viewDidLoad()
